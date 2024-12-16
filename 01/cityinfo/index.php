@@ -17,11 +17,11 @@
         <td colspan="2"><?php include("top.php") ?></td>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
+        <td width="217" valign="top"><?php include("left.php"); ?></td>
+        <td width="586" valign="top" bgcolor="#FEFEF6"><?php include("main.php"); ?></td>
     </tr>
     <tr>
-        <td></td>
+        <td colspan="2"><?php include("bottom.php"); ?></td>
     </tr>
 </table>
 
