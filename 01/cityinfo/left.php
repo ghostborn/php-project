@@ -10,13 +10,14 @@
     }
 
     function opengg(id) {
-        window.open();
+        window.open("showgg.php?id=" + id, "", "width=700,height=296");
     }
 </script>
 
 <table width="240" border="0" cellpadding="0" cellspacing="0">
     <tr>
-        <td height="31"> <img src="Images/landian.gif" width="9" height="9" alt=""> <strong>推荐企业广告信息</strong></td>
+        <td height="31"><img src="Images/landian.gif" width="9" height="9" alt=""> <strong>推荐企业广告信息</strong>
+        </td>
     </tr>
     <tr>
         <td valign="top">
@@ -27,45 +28,45 @@
                             <tr>
                                 <td height="5" colspan="2"></td>
                             </tr>
-							<?php
-							include("conn/conn.php");
-							include("JS/function.php");
-							$gsql = mysqli_query($conn,
-								"SELECT * FROM tb_advertising WHERE flag=1 ORDER BY id DESC LIMIT 0,10");
-							$ginfo = mysqli_fetch_array($gsql);
-							if ($ginfo === false) {
-								?>
+                            <?php
+                            include("conn/conn.php");
+                            include("JS/function.php");
+                            $gsql = mysqli_query($conn,
+                                "SELECT * FROM tb_advertising WHERE flag=1 ORDER BY id DESC LIMIT 0,10");
+                            $ginfo = mysqli_fetch_array($gsql);
+                            if ($ginfo === false) {
+                                ?>
                                 <tr>
                                     <td width="10" height="5"></td>
                                     <td height="20">
                                         <div align="left">暂无推荐企业广告信息!</div>
                                     </td>
                                 </tr>
-								<?php
-							} else {
-								do {
-									?>
+                                <?php
+                            } else {
+                                do {
+                                    ?>
                                     <tr>
                                         <td width="10" height="5">
                                             <div align="center">·</div>
                                         </td>
                                         <td height="20">
                                             <div align="left">
-                                                <a href="">
-													<?php
-													echo msubstr($ginfo['title'], 0, 30);
-													if (strlen($ginfo['title']) > 30) {
-														echo "...";
-													}
-													?>
+                                                <a href="javascript:opengg(<?php echo $ginfo['id']; ?>)">
+                                                    <?php
+                                                    echo msubstr($ginfo['title'], 0, 30);
+                                                    if (strlen($ginfo['title']) > 30) {
+                                                        echo "...";
+                                                    }
+                                                    ?>
                                                 </a>
                                             </div>
                                         </td>
                                     </tr>
-									<?php
-								} while ($ginfo = mysqli_fetch_array($gsql));
-							}
-							?>
+                                    <?php
+                                } while ($ginfo = mysqli_fetch_array($gsql));
+                            }
+                            ?>
                         </table>
                     </td>
                 </tr>
@@ -75,7 +76,7 @@
     <tr>
         <td height="31">&nbsp;<img src="Images/landian.gif" width="9" height="9"> <strong>信息快速检索</strong></td>
     </tr>
-    <form name="form1" method="post" action="">
+    <form name="form1" method="post" action="findinfo.php">
         <tr>
             <td height="103" align="center">
                 <table width="225" height="103" border="0" background="Images/leftS.jpg" cellspacing="0"
