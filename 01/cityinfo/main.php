@@ -32,15 +32,16 @@ include("conn/conn.php");
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td height="26"><span class="style5"><?php echo $sginfo['content']; ?></span>
+                                        <td height="26">
+                                            <span class="style5"><?php echo $sginfo['content']; ?></span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td height="26">
-                                    <span class="style8">
-                                        联系人: <?php echo $sginfo['linkman']; ?>
-                                        联系电话: <?php echo $sginfo['tel']; ?>
-                                    </span>
+                                            <span class="style8">
+                                                联系人: <?php echo $sginfo['linkman']; ?>
+                                                联系电话: <?php echo $sginfo['tel']; ?>
+                                            </span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -61,7 +62,6 @@ include("conn/conn.php");
 						?>
                     </td>
                 </tr>
-
                 <tr>
                     <td align="center" valign="top">
                         <table width="667" border="0" cellspacing="0" cellpadding="0">
@@ -98,11 +98,82 @@ include("conn/conn.php");
 						} else {
 							$page = intval($_GET['page']); //获取当前页
 						}
+						//查询当前页中免费的公寓信息
+						$gsql = mysqli_query($conn,
+							"select * from tb_info where type='公寓信息' and checkstate=1 order by edate desc limit " . ($page - 1) * $pagesize . ",$pagesize");
+						$ginfo = mysqli_fetch_array($gsql); //将查询结果集返回到数组
+						if ($ginfo) {
+							do {
+								?>
+                                <table width="647" border="0" cellspacing="0" cellpadding="0" bgcolor="#FAFFF4">
+                                    <tr>
+                                        <td height="26">
+                                            <span class="style1">『公寓信息』</span>
+                                            <span class="style8"><?php echo $ginfo['title']; ?></span>
+                                            <span class="style6"><?php echo $ginfo['edate']; ?></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="26">
+                                            <span class="style5"><?php echo $ginfo['content']; ?></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="26">
+                                            <span class="style8">联系人: <?php echo $ginfo['linkman']; ?> 联系电话: <?php echo $ginfo['tel']; ?></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="3" background="Images/line1.gif"></td>
+                                    </tr>
+                                </table>
+								<?php
+							} while ($ginfo = mysqli_fetch_array($gsql));
+							?>
+                            <table width="650" height="27" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td width="650" height="27" colspan="3" align="right">共有<?php
+										echo $total
+										?>
+                                        条 每页显示<?php echo $pagesize; ?>条 第<?php echo $page; ?>
+                                        页/共<?php echo $pagecount; ?>页
+										<?php
+										if ($page >= 2) {
+											?>
+                                            <a href="index.php?page=1" title="首页"></a>
+                                            <a href="index.php?page=<?php echo $page - 1; ?>" title="前一页"">
+											<?php
+										}
+										if ($pagecount <= 4) {
+											for ($i = 1; $i <= $pagecount; $i++) {
+												?>
+                                                <a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+												<?php
+											}
+										} else {
+											for ($i = 1; $i <= 4; $i++) {
+												?>
+                                                <a href="index.php?page=<?php echo $i; ?>"><?php echo $i; ?></a>
+											<?php } ?>
+                                            <a href="index.php?page=<?php echo $page - 1; ?>" title="后一页"></a> <a
+                                                    href="index.php?page=<?php echo $pagecount; ?>" title="尾页"></a>
+										<?php } ?>
+                                    </td>
+                                </tr>
+                            </table>
+							<?php
+						} else {
+							?>
+                            <table width="647" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td align="center">暂无公寓信息资源！</td>
+                                </tr>
+                            </table>
+							<?php
+						}
 						?>
                     </td>
                 </tr>
-
-
             </table>
         </td>
     </tr>

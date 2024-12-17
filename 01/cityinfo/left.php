@@ -88,7 +88,7 @@
                                         <input name="content" type="text" id="content" size="20"></td>
                                 </tr>
                                 <tr>
-                                    <td height="26">条 件:
+                                    <td height="26">条 件:&nbsp;&nbsp;
                                         <select name="type">
                                             <option value="招聘信息">-招聘信息-</option>
                                             <option value="求职信息" selected>-求职信息-</option>
