@@ -9,7 +9,7 @@
 <body>
 <div class="top">
     <div>
-        <a href="">[发布信息]</a>
+        <a href="release.php">[发布信息]</a>
         <a href="">[进入后台]</a>
     </div>
     <div>

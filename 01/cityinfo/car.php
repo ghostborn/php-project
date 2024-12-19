@@ -18,7 +18,7 @@
 	</tr>
 	<tr>
 		<td width="217" valign="top"><?php include("left.php"); ?></td>
-		<td width="586" valign="top" bgcolor="#FEFEF6"><?php include("teaching_info.php"); ?></td>
+		<td width="586" valign="top" bgcolor="#FEFEF6"><?php include("car_info.php"); ?></td>
 	</tr>
 	<tr>
 		<td colspan="2"><?php include("bottom.php"); ?></td>
