@@ -10,7 +10,7 @@
 <div class="top">
     <div>
         <a href="release.php">[发布信息]</a>
-        <a href="">[进入后台]</a>
+        <a href="admin/login.php">[进入后台]</a>
     </div>
     <div>
         <ul>
