@@ -49,18 +49,18 @@
                         <td align="left"><input name="pwd" type="password" id="pwd"></td>
                     </tr>
                     <tr align="center" valign="top">
-                        <td height="80" colspan="2"><input name="imageField" type="image" src="images/btn1.gif"
-                                                           class="input1">
+                        <td height="80" colspan="2">
+                            <input name="imageField" type="image" src="images/btn1.gif" class="input1">
                             &nbsp;
                             <input name="imageField2" type="image" src="images/btn2.gif"
-                                   onClick="form.reset();return false;" class="input1"></td>
+                                   onClick="form.reset();return false;" class="input1">
+                        </td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
 </form>
-
 
 </body>
 
