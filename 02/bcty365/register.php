@@ -134,12 +134,116 @@ include_once("top.php");
             </table>
 
 
+            <table id="showget_u_p" style="display:yes" width="700" height="125" border="0" align="center"
+                   cellpadding="0" cellspacing="0">
+                <tr>
+                    <td height="120" bgcolor="#137CE6">
+                        <table width="750" height="120" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td bgcolor="#FFFFFF" valign="top">
+                                    <table width="750" height="20" border="0" align="center" cellpadding="0"
+                                           cellspacing="0" background="images/lt_15_2.jpg">
+                                        <tr>
+                                            <td height="20" class="a9">&nbsp;&nbsp;&nbsp;&nbsp;登录信息录入</td>
+                                        </tr>
+                                    </table>
 
-
-
-
+                                    <table width="350" height="120" border="0" align="center" cellpadding="0"
+                                           cellspacing="0">
+                                        <script>
+                                            function chk_reg_input(form) {
+                                                if (form.usernc.value === '') {
+                                                    alert("请输入用户名!");
+                                                    form.usernc.select();
+                                                    return false
+                                                }
+                                                if (form.userpwd1.value == "") {
+                                                    alert("请输入登录密码！");
+                                                    form.userpwd1.select();
+                                                    return false;
+                                                }
+                                                if (form.userpwd2.value == "") {
+                                                    alert("请输入确认密码！");
+                                                    form.userpwd2.select();
+                                                    return false;
+                                                }
+                                                if (form.userpwd1.value != form.userpwd2.value) {
+                                                    alert("登录密码与确认密码不同！");
+                                                    form.userpwd1.select();
+                                                    return false;
+                                                }
+                                                if (form.userpwd1.value.length < 3) {
+                                                    alert("登录密码应大于3位！");
+                                                    form.userpwd1.select();
+                                                    return false;
+                                                }
+                                                return true;
+                                            }
+                                            function open_chknc(x) {
+                                                window.open("chkusernc.php?nc=" + x, "newframe", "top=250,left=450,width=180,height=100,menubar=no,toobar=no,location=no,scrollbars=no,resizeable=no");
+                                            }
+                                        </script>
+                                        <form action="getuserinfo.php" method="post" name="from_reg" id="from_reg"
+                                              onsubmit="return chk_reg_input(this)">
+                                            <tr>
+                                                <td width="81" height="30">
+                                                    <div align="center">用&nbsp;户&nbsp;名：</div>
+                                                </td>
+                                                <td width="184">&nbsp;
+                                                    <input type="text" name="usernc" size="25" class="inputcss"
+                                                           maxlength="100"/>
+                                                </td>
+                                                <td width="85">
+                                                    <input type="button" name="button"
+                                                           onclick="open_chknc(from_reg.usernc.value)"
+                                                           value="查看可用性"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30">
+                                                    <div align="center">登录密码：</div>
+                                                </td>
+                                                <td height="30" colspan="2">&nbsp;
+                                                    <input type="password" name="userpwd1" size="25" class="inputcss"
+                                                           maxlength="100"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30">
+                                                    <div align="center">确认密码：</div>
+                                                </td>
+                                                <td height="30" colspan="2">&nbsp;
+                                                    <input type="password" name="userpwd2" size="25" class="inputcss"
+                                                           maxlength="100"/></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30" colspan="3">
+                                                    <div align="center">
+                                                        <input name="submit" type="submit" value="下一步"/>
+                                                        &nbsp;&nbsp;
+                                                        <input name="reset" type="reset" value="重写"/>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </form>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20">&nbsp;</td>
+                </tr>
+            </table>
+            <table border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td bgcolor="#0066CC"></td>
+                </tr>
+            </table>
         </td>
-
-
     </tr>
 </table>
+<?php
+include_once("bottom.php");
+?>
