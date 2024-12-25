@@ -1,27 +1,5 @@
 <?php
-/**
- *
- *                        .::::.
- *                      .::::::::.
- *                     :::::::::::
- *                  ..:::::::::::'
- *               '::::::::::::'
- *                 .::::::::::
- *            '::::::::::::::..
- *                 ..::::::::::::.
- *               ``::::::::::::::::
- *                ::::``:::::::::'        .:::.
- *               ::::'   ':::::'       .::::::::.
- *             .::::'      ::::     .:::::::'::::.
- *            .:::'       :::::  .:::::::::' ':::::.
- *           .::'        :::::.:::::::::'      ':::::.
- *          .::'         ::::::::::::::'         ``::::.
- *      ...:::           ::::::::::::'              ``::.
- *     ````':.          ':::::::::'                  ::::..
- *                        '.:::::'                    ':'````..
- *
- *
- */
+
 include_once("top.php");
 ?>
 
@@ -318,10 +296,22 @@ include_once("top.php");
                                                         </table>
                                                     </td>
                                                 </tr>
-
-
+                                                <tr>
+                                                    <td height="50" colspan="3">
+                                                        <div align="center">
+                                                            <input type="hidden" value="<?php echo $num; ?>"
+                                                                   name="num"/>
+                                                            <input type="hidden" name="usernc"
+                                                                   value="<?php echo $_POST["usernc"]; ?>">
+                                                            <input type="hidden" name="pwd1"
+                                                                   value="<?php echo $_POST["userpwd1"]; ?>">
+                                                            <input type="submit" name="submit" value="提交注册信息"/>
+                                                            &nbsp;&nbsp;
+                                                            <input name="reset" type="reset" value="重新填写注册信息"/>
+                                                        </div>
+                                                    </td>
+                                                </tr>
                                             </form>
-
                                         </table>
 										<?php
 									}
@@ -333,13 +323,11 @@ include_once("top.php");
                 </tr>
             </table>
 
-
             <table width="805" height="10" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
                     <td></td>
                 </tr>
             </table>
-
 
         </td>
     </tr>

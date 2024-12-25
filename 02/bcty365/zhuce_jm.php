@@ -34,13 +34,11 @@
                             }
                             return true;
                         }
-                    </script>
-                    <script>
-                        function openfindpwd() {
 
+                        function openfindpwd() {
+                            window.open("openfindpwd.php", "newframe", "left=200,top=200,width=300,height=100,menubar=no,toolbar=no,location=no,scrollbars=no,location=no");
                         }
                     </script>
-
                     <form action="dl.php" method="post" name="form1" id="form1" onsubmit="return submitu(this)">
                         <tr>
                             <td width="76" align="center"><span class="zhuce">用户名：</span></td>
