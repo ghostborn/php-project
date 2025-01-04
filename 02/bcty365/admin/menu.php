@@ -23,13 +23,13 @@
     </tr>
 </table>
 <table name="tz1" id="tz1" width="170" height="40" border="0" align="center" cellpadding="0" cellspacing="0"
-	<?php
-	if (isset($_GET['htgl']) && !($_GET['htgl'] == "添加编程词典版本" || $_GET['htgl'] == "编辑编程词典版本" || $_GET['htgl'] == "添加编程词典" || $_GET['htgl'] == "编辑编程词典")) {
-		?>
+    <?php
+    if (isset($_GET['htgl']) && !($_GET['htgl'] == "添加编程词典版本" || $_GET['htgl'] == "编辑编程词典版本" || $_GET['htgl'] == "添加编程词典" || $_GET['htgl'] == "编辑编程词典")) {
+        ?>
         style="display:none"
-		<?php
-	}
-	?>
+        <?php
+    }
+    ?>
 >
 
     <tr>
@@ -44,7 +44,6 @@
             <div align="left"><a href="default.php?htgl=编辑编程词典版本">编辑编程词典版本</a></div>
         </td>
     </tr>
-
 
     <tr>
         <td width="40" height="24" background="images/bg_16_16.jpg">&nbsp;</td>
@@ -72,15 +71,13 @@
     </tr>
 </table>
 <table name="s11" id="s11" width="170" height="40" border="0" align="center" cellpadding="0" cellspacing="0"
-	<?php
-	if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加常见问题" || $_GET['htgl'] == "编辑常见问题" || $_GET['htgl'] == "查看客户反馈")) {
-		?>
+    <?php
+    if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加常见问题" || $_GET['htgl'] == "编辑常见问题" || $_GET['htgl'] == "查看客户反馈")) {
+        ?>
         style="display:none"
-		<?php
-	}
-	?>
-
-
+        <?php
+    }
+    ?>
 >
     <tr>
         <td width="40" height="24" background="images/bg_16_16.jpg">&nbsp;</td>
@@ -112,14 +109,13 @@
     </tr>
 </table>
 <table name="yj" id="yj" width="170" height="40" border="0" align="center" cellpadding="0" cellspacing="0"
-	<?php
-	if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加软件试用" || $_GET['htgl'] == "编辑软件试用")) {
-		?>
+    <?php
+    if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加软件试用" || $_GET['htgl'] == "编辑软件试用")) {
+        ?>
         style="display:none"
-		<?php
-	}
-	?>
-
+        <?php
+    }
+    ?>
 >
 
     <tr>
@@ -136,7 +132,6 @@
     </tr>
 </table>
 
-
 <table width="175" height="28" border="0" align="center" cellpadding="0" cellspacing="4" onclick="change(gg,img_gg)"
        style="cursor:hand">
     <tr>
@@ -146,15 +141,13 @@
     </tr>
 </table>
 <table name="gg" id="gg" width="170" height="40" border="0" align="center" cellpadding="0" cellspacing="0"
-	<?php
-	if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加升级包" || $_GET['htgl'] == "编辑升级包" || $_GET['htgl'] == "添加序列号" || $_GET['htgl'] == "编辑序列号")) {
-		?>
+    <?php
+    if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加升级包" || $_GET['htgl'] == "编辑升级包" || $_GET['htgl'] == "添加序列号" || $_GET['htgl'] == "编辑序列号")) {
+        ?>
         style="display:none"
-		<?php
-	}
-	?>
-
-
+        <?php
+    }
+    ?>
 >
     <tr>
         <td width="40" height="24" background="images/bg_16_16.jpg">&nbsp;</td>
@@ -182,9 +175,7 @@
         </td>
     </tr>
 
-
 </table>
-
 
 <table width="175" height="28" border="0" align="center" cellpadding="0" cellspacing="4" onclick="change(gggg,img_gggg)"
        style="cursor:hand">
@@ -196,13 +187,13 @@
 </table>
 <table name="gggg" id="gggg" width="170" height="24" border="0" align="center" cellpadding="0" cellspacing="0"
 
-	<?php
-	if (!isset($_GET['htgl']) || !($_GET['htgl'] == "订单管理")) {
-		?>
+    <?php
+    if (!isset($_GET['htgl']) || !($_GET['htgl'] == "订单管理")) {
+        ?>
         style="display:none"
-		<?php
-	}
-	?>
+        <?php
+    }
+    ?>
 >
     <tr>
         <td width="40" height="24" background="images/bg_16_16.jpg">&nbsp;</td>
@@ -223,13 +214,13 @@
 </table>
 <table name="s111" id="s111" width="170" height="40" border="0" align="center" cellpadding="0" cellspacing="0"
 
-	<?php
-	if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加公告" || $_GET['htgl'] == "编辑公告")) {
-		?>
+    <?php
+    if (!isset($_GET['htgl']) || !($_GET['htgl'] == "添加公告" || $_GET['htgl'] == "编辑公告")) {
+        ?>
         style="display:none"
-		<?php
-	}
-	?>
+        <?php
+    }
+    ?>
 
 >
     <tr>
@@ -248,7 +239,10 @@
 
 <table width="195" height="28" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-        <td align="center"><a href="http://www.bcty365.com" target="_blank"><img src="images/bg_16_27.jpg"
-                                                                                 border="0"></a></td>
+        <td align="center">
+            <a href="http://www.bcty365.com" target="_blank">
+                <img src="images/bg_16_27.jpg" border="0">
+            </a>
+        </td>
     </tr>
 </table>
