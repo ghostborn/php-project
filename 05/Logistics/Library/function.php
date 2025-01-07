@@ -54,7 +54,7 @@ function getUrl(): string
  * @param string $url
  * @return string
  */
-function pageUrl($page, string $url = '')
+function pageUrl($page, string $url = ''): string
 {
     $url = empty($url) ? getUrl() : $url;
     //查询url中是否存在?
@@ -87,7 +87,7 @@ function pageUrl($page, string $url = '')
  * @param int $show 显示按钮数
  * @return string
  */
-function pages(int $total, int $currentPage, int $pageSize, int $show = 6)
+function pages(int $total, int $currentPage, int $pageSize, int $show = 6): string
 {
     $pageStr = '';
     //仅当总数大于每页显示条数 才进行分页处理
