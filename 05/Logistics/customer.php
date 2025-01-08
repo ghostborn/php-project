@@ -122,6 +122,15 @@ $res->execute();
 
 
 <script>
+    $(function(){
+        $('.del').on('click',function(){
+            const url = $(this).attr('href');
+            layer.confirm('确认删除该用户信息吗?',function () {
+                window.location = url;
+            })
+            return false;
+        })
+    })
 
 </script>
 
