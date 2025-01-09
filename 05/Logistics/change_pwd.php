@@ -100,4 +100,4 @@ if (!checkLogin()) {
 
 </script>
 
-<?php include('View\footer.html') ?>
+<?php include('View/footer.html') ?>

@@ -134,7 +134,7 @@ $res->execute();
 
 </script>
 
-<?php include('View\footer.html') ?>
+<?php include('View/footer.html') ?>
 
 
 

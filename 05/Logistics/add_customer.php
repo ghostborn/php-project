@@ -93,4 +93,4 @@ $row = $res->fetch(PDO::FETCH_ASSOC);
 
 </script>
 
-<?php include('View\footer.html') ?>
+<?php include('View/footer.html') ?>

@@ -169,6 +169,6 @@ $row = $res->fetch(PDO::FETCH_ASSOC); // 以关联方式获取数据
 
 </script>
 
-<?php include('View\footer.html') ?>
+<?php include('View/footer.html') ?>
 
 
