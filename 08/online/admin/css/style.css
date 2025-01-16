@@ -1,0 +1,61 @@
+/* CSS Document */
+body,table {
+margin:0 auto;
+}
+body,td,th {
+	font-size: 12px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+	color: #CC0000;
+}
+#a_login #manager {
+	height: 15px;
+	width: 125px;
+	border: 1px solid #000000;
+}
+submit {
+	border: 1px solid #f0f0f0;
+}
+
+#a_login #pwd {
+	height: 15px;
+	width: 125px;
+	border: 1px solid #000000;
+}
+#lg {
+	height: 28px;
+	width: 67px;
+	border: 1px solid #f0f0f0;
+	background-image: url(../images/login.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#rt {
+	height: 28px;
+	width: 67px;
+	border: 1px solid #f0f0f0;
+	background-image: url(../images/return.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+div{
+overflow:hidden;
+}
+.menu_td {
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #5A3408;
+}
+.submit {
+	border: 1px solid #000000;
+}
