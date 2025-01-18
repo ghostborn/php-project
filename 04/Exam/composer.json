@@ -1,0 +1,15 @@
+{
+  "name": "vendor_name/Exam",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "贾丽鹏",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "noahbuscher/macaw": "dev-master"
+  }
+}
