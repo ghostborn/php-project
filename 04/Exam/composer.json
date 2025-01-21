@@ -1,8 +1,4 @@
 {
-  "name": "vendor_name/Exam",
-  "description": "description",
-  "minimum-stability": "stable",
-  "license": "proprietary",
   "authors": [
     {
       "name": "贾丽鹏",
@@ -10,6 +6,8 @@
     }
   ],
   "require": {
-    "noahbuscher/macaw": "dev-master"
+    "noahbuscher/macaw": "dev-master",
+    "illuminate/database": "*",
+    "jasongrimes/paginator": "~1.0"
   }
 }
